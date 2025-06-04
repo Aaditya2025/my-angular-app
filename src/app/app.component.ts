@@ -1,15 +1,45 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { ProfileComponent } from './profile/profile.component';
 
 @Component({
   selector: 'app-root',
-  imports: [LoginComponent,SignUpComponent, ProfileComponent],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Aditya Yadav';
+  // handleClickEvent(){
+  //   console.log("Function Called!");
+  //   this.otherFunction(); 
+  // }
+
+  // otherFunction(){
+  //   console.log("other function called!");
+  // }
+  count = 0;
+
+  // handleIncrement() {
+  //   this.count = this.count + 1;
+  // }
+
+  // handleReset() {
+  //   this.count = 0;
+  // }
+
+  // handleDecrement() {
+  //   this.count = this.count - 1;
+  // }
+
+  handleCount(val: string) {
+    if (val == "minus") {
+      if(this.count >0){
+        this.count = this.count - 1;
+      }else{
+        this.count = 0;
+      }
+    } else if (val == "plus") {
+      this.count = this.count + 1;
+    } else {
+      this.count = 0;
+    }
+  }
 }

@@ -1,12 +1,11 @@
-<h1>Angular Component</h1>
-{{title}}
-<app-login></app-login>
+<h1>Counter App</h1>
 
-<h2>Second time using that components</h2>
-
-<app-login></app-login>
-
-<app-sign-up></app-sign-up>
-
-<app-profile></app-profile>
+<div style="text-align: center;">
+    <h2 class="count">{{count}}</h2>
+    <div>
+        <button (click) = "handleCount('minus')" class="btn red">Decrement</button>
+        <button (click) = "handleCount('reset')" class="btn  green">Reset</button>
+        <button (click) = "handleCount('plus')" class="btn blue">Increment</button>
+    </div>
+</div>
 
