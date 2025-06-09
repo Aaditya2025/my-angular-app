@@ -1,4 +1,4 @@
-<!-- Created a Basic Counter App -->
+<!------------------------------- Counter App in Angular ----------------------------->
 
 
 <!-- <h1>Counter App</h1>
@@ -12,4 +12,165 @@
     </div>
 </div> -->
 
-<!-- Event in Angular -->
+
+
+
+
+
+
+<!------------------------------- Event in Angular ----------------------------->
+
+<!-- <h1>Event In Angular </h1>
+
+<button class="btn" name="login" (click)="handleEvent($event)">
+    Click Event
+</button>
+
+<br>
+<br>
+
+<div 
+    (click)="handleEvent($event)" 
+    (mouseenter)="handleEvent($event)" 
+    (mouseleave)="handleEvent($event)"
+    style="height: 100px; width: 100px; background-color: green;">
+</div>
+
+<br>
+<br>
+
+<input type="text" name="user" 
+(input)="handleEvent($event)"> -->
+
+
+
+
+
+
+
+
+
+
+<!------------------------------- Get & Set Input fields Values in Angular ----------------------------->
+
+
+<!-- 
+<h1>Get and Set Input Field Value </h1>
+<h1>User name is : {{displayName}}</h1>
+<input type="text" value="{{name}}" (input)="getName($event)"placeholder="Enter User Name">
+
+<br>
+<br>
+
+<button (click)="showName()">Get Name</button>
+<button (click)="setName()">Set Name</button>
+
+<hr>
+
+<h1>Emai is : {{email}}</h1>
+<input type="text"  placeholder="Enter emailId" #emailField>
+<button (click)="getMail(emailField.value)">Get Email</button>
+<button (click)="setMail()">Set Email</button> -->
+
+
+
+
+<!------------------------------- If Else in Angular | Hide-Show | Toggle -------------------------------->
+
+
+<!-- <h1>If Else | Control Flow </h1>
+<button (click)="hide()">Hide</button>
+<button (click)="show()">Show</button>
+<button (click)="toggle()">Toggle</button>
+@if(display){
+    <div style = "width: 200px; height: 200px; background-color: red;"></div>
+} 
+
+<hr>
+
+<button (click)="toggleTwo()">{{toggleDiv ? 'Show Gray Div' : 'Show Gold Div'}}</button>
+
+
+
+@if(toggleDiv){
+    <div style="background-color: gold; width: 200px; height: 200px;"></div>
+}
+@else {
+    <div style="background-color: gray; width: 200px; height: 200px;"></div>
+} -->
+
+
+
+
+
+
+
+
+
+
+<!---------------------------------- Else If in Angular | Control ------------------------------------->
+
+<h1 style="color: black;">Else If | Control Flow</h1>
+
+<button (click)="colorValue(1)">Red</button>
+<button (click)="colorValue(2)">Green</button>
+<button (click)="colorValue(3)">Blue</button>
+<button (click)="colorValue(4)">Yellow</button>
+<button (click)="colorValue(5)">Orange</button>
+<button (click)="colorValue(6)">Other</button>
+
+<input type="text" placeholder="Enter the color number" (input)="handleInput($event)">
+
+@if(val == 1){
+    <div style="background-color: red; width: 200px; height: 200px;"></div>
+}
+@else if (val == 2) {
+    <div style="background-color: green; width: 200px; height: 200px;"></div>
+}
+@else if(val == 3){
+    <div style="background-color: blue; width: 200px; height: 200px;"></div>
+}
+@else if(val == 4){
+    <div style="background-color: yellow; width: 200px; height: 200px;"></div>}
+
+@else if(val == 5){
+    <div style="background-color: orangered; width: 200px; height: 200px;"></div>
+}
+@else {
+    <div style="background-color: black; width: 200px; height: 200px;"></div>
+}
+
+
+
+<h1>Switch Case Statement:</h1> 
+<p>Used for large number of cases.</p>
+
+<button (click)="changeColor('Red')">Red</button>
+<button (click)="changeColor('Blue')">Blue</button>
+<button (click)="changeColor('Green')">Green</button>
+<button (click)="changeColor('Yellow')">Yellow</button>
+<button (click)="changeColor('Orange')">Orange</button>
+<button (click)="changeColor('Black')">Other</button>
+
+<input type="text" (input)="handleColor($event)" placeholder = "Enter Color" >
+
+@switch (color) {
+    @case('Red'){
+        <h1 style="background-color: red;">Red</h1>
+    }
+    @case('Blue'){
+        <h1 style="background-color: blue;">Blue</h1>
+    }
+    @case('Green'){
+        <h1 style="background-color: green;">Green</h1>
+    }
+    @case('Yellow'){
+        <h1 style="background-color: yellow;">Yellow</h1>
+    }
+    @case('Orange'){
+        <h1 style="background-color: orange;">Orange</h1>
+    }
+    @default {
+        <h1 style="background-color: black; color: white;">Color Not Matched</h1>
+    }
+}
