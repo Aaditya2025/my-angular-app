@@ -1,50 +1,67 @@
-/**********************************Counter App in Angular*******************************/
-
-// import { Component } from '@angular/core';
+// import { Component } from "@angular/core";
+// import { ProfileComponent } from "./profile/profile.component";
+// import { LoopComponent } from "./loop/loop.component";
 
 // @Component({
 //   selector: 'app-root',
-//   imports: [],
+//   imports: [ProfileComponent, LoopComponent],
 //   templateUrl: './app.component.html',
 //   styleUrl: './app.component.css'
 // })
-// export class AppComponent {
-//   // handleClickEvent(){
-//   //   console.log("Function Called!");
-//   //   this.otherFunction(); 
-//   // }
 
-//   // otherFunction(){
-//   //   console.log("other function called!");
-//   // }
-//   count = 0;
+// export class AppComponent{
 
-//   // handleIncrement() {
-//   //   this.count = this.count + 1;
-//   // }
-
-//   // handleReset() {
-//   //   this.count = 0;
-//   // }
-
-//   // handleDecrement() {
-//   //   this.count = this.count - 1;
-//   // }
-
-//   handleCount(val: string) {
-//     if (val == "minus") {
-//       if(this.count >0){
-//         this.count = this.count - 1;
-//       }else{
-//         this.count = 0;
-//       }
-//     } else if (val == "plus") {
-//       this.count = this.count + 1;
-//     } else {
-//       this.count = 0;
-//     }
-//   }
 // }
+
+
+
+/**********************************Counter App in Angular*******************************/
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  imports: [],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  // handleClickEvent(){
+  //   console.log("Function Called!");
+  //   this.otherFunction(); 
+  // }
+
+  // otherFunction(){
+  //   console.log("other function called!");
+  // }
+  count = 0;
+
+  // handleIncrement() {
+  //   this.count = this.count + 1;
+  // }
+
+  // handleReset() {
+  //   this.count = 0;
+  // }
+
+  // handleDecrement() {
+  //   this.count = this.count - 1;
+  // }
+
+  handleCount(val: string) {
+    if (val == "minus") {
+      if(this.count >0){
+        this.count = this.count - 1;
+      }else{
+        this.count = 0;
+      }
+    } else if (val == "plus") {
+      this.count = this.count + 1;
+    } else {
+      this.count = 0;
+    }
+  }
+}
 
 
 
@@ -155,31 +172,32 @@
 
 
  /***********************************Else If in Angular | Control **************************************/
-import { Component } from "@angular/core";
+ 
+// import { Component } from "@angular/core";
 
-@Component({
-  selector: 'app-root', 
-  imports: [], 
-  templateUrl : './app.component.html',
-  styleUrl: './app.component.css'
-})
+// @Component({
+//   selector: 'app-root', 
+//   imports: [], 
+//   templateUrl : './app.component.html',
+//   styleUrl: './app.component.css'
+// })
 
-export class AppComponent{
-  val = 10;
-  color = 'blue'
-  colorValue(val: number){
-    this.val = val;
-  }
+// export class AppComponent{
+//   val = 10;
+//   color = 'blue'
+//   colorValue(val: number){
+//     this.val = val;
+//   }
 
-  handleInput(event: Event){
-    this.val = parseInt((event.target as HTMLInputElement).value)
-  }
+//   handleInput(event: Event){
+//     this.val = parseInt((event.target as HTMLInputElement).value)
+//   }
 
-  handleColor(event: Event){
-    this.color = (event.target as HTMLInputElement).value;
-  }
+//   handleColor(event: Event){
+//     this.color = (event.target as HTMLInputElement).value;
+//   }
 
-  changeColor(val: string){
-    this.color = val;
-  }
-}
+//   changeColor(val: string){
+//     this.color = val;
+//   }
+// }
